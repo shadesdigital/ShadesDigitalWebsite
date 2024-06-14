@@ -28,11 +28,13 @@ export default function AboutUs() {
       <div className="h-screen bg-gradient-to-r from-cyan-700 to-blue-900 flex flex-col items-center text-white">
         <div className="top-section w-9/12  flex flex-row gap-5 p-3 mb-3">
           <div className="who-are-we-label w-3/5 h-full p-5 py-7 pr-20 border-8 text-6xl">
-            <b>WHO</b>
-            <br />
-            <b>ARE</b>
-            <br />
-            <b>WE ?</b>
+            <b>
+              WHO
+              <br />
+              ARE
+              <br />
+              WE ?
+            </b>
           </div>
           <div className="who-are-we-data py-4 text-sm">
             Founded by a team of young passionate entrepreneurs, Shades Digital
@@ -81,6 +83,7 @@ export default function AboutUs() {
                 logo={card?.logo}
                 title={card?.title}
                 data={card?.data}
+                isAboutUs={true}
               />
             ))}
           </div>
