@@ -1,3 +1,4 @@
+import {nextui} from '@nextui-org/theme';
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -5,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/flowbite-react/lib/**/*.js",
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
   ],
   theme: {
     extend: {
@@ -20,9 +21,9 @@ const config: Config = {
           100: "#cfffe",//todo
           200: "#a5f3fc",//todo
           300: "#67e8f9",//todo
-          400: "#22d3ee",//todo
-          500: "#06b6d4",//todo
-          600: "#0891b2",//todo
+          400: "#030c0f",
+          500: "#010202",
+          600: "#0b1720",
           700: "#163448",
           800: "#0A151D",
           900:"#060d13"
@@ -32,6 +33,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [nextui()],
 };
 export default config;

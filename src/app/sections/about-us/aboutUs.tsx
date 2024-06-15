@@ -22,10 +22,8 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="w-full bg-banner-bg bg-center">
-      {/* <div className="w-full text-white bg-gradient-to-b from-stone-950 to-transparent"> */}
-
-      <div className="h-screen bg-gradient-to-r from-cyan-700 to-blue-900 flex flex-col items-center text-white">
+    <div className="w-full h-max  bg-banner-bg bg-center">
+      <div className="h-fit pb-8 bg-gradient-to-b from-background-900 via-background-700 to-background-600 flex flex-col items-center text-white">
         <div className="top-section w-9/12  flex flex-row gap-5 p-3 mb-3">
           <div className="who-are-we-label w-3/5 h-full p-5 py-7 pr-20 border-8 text-6xl">
             <b>
@@ -60,13 +58,13 @@ export default function AboutUs() {
         <div
           style={{
             backgroundImage:
-              "url(https://images.ctfassets.net/lsw6afd8rv2d/OhabI7vOem8RswC4kspXa/66b4a145fff6034f94c5d71fdede96cd/banner.jpg?h=250)",
+              "url(https://images.ctfassets.net/lsw6afd8rv2d/5nq9rup9QMQSSJy2ZuMnJA/322fbeabe1ddfcd5c2cbeb5438dc19ac/BW1.jpg?h=250)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="lower-section w-10/12  px-20 text-center bg-blue-500"
+          className="lower-section w-10/12 h-3/5  px-20 text-center bg-blue-500"
         >
-          <div className="flex w-fit mx-auto mb-5 -mt-5">
+          <div className="flex w-fit h-fit mx-auto mb-5 -mt-5">
             <Image src={"/assets/plus.svg"} alt="plus" height={80} width={40} />
             <h2 className="text-5xl">WHY US ?</h2>
           </div>
