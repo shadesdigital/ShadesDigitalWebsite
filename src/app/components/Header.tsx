@@ -142,7 +142,7 @@ export default function Header() {
 
               {/* dropdown */}
               {item?.menu && (
-                <div className="absolute   right-0   top-10 hidden w-auto  flex-col gap-1 text-slate-400  rounded-lg bg-white py-3 shadow-md  transition-all group-hover:flex ">
+                <div className="absolute  z-50 right-0   top-10 hidden w-auto  flex-col gap-1 text-slate-400  rounded-lg bg-white py-3 shadow-md  transition-all group-hover:flex ">
                   {item?.menu.map((element, key) => (
                     <Link
                       key={key}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Banner from "../../components/Banner";
 import image from "../../../../public/assets/bg2.png";
 import Header from "@/app/components/Header";
+import Globe from "@/app/components/magicui/globe";
 
 export default function Herobanner() {
   return (
@@ -40,8 +41,9 @@ export default function Herobanner() {
         {/* <div className="w-full text-white bg-gradient-to-r from-cyan-500 to-blue-500 opacity-70"> */}
         <div className="w-full text-white bg-gradient-to-b from-stone-950 to-transparent ">
           <Header/>
-          <div className="self-start w-2/3">
+          <div className="self-start  flex ">
           <Banner />
+          {/* <Globe className="top-28 " />  */}
           </div>
         </div>
       </div>
