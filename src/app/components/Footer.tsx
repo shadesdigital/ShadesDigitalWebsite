@@ -25,20 +25,16 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="opacity-40 mt-8 p-8 flex items-center gap-2">
-          <Image
+        <div className="opacity-40 text-xs mt-8 p-8 flex items-center gap-2">
+          {/* <Image
             src={logo}
             alt="banner background"
             className="w-6 h-6 "
-          ></Image>
-          <div className="text-xs flex flex-col ">
-            <span>SHADES, 2023. All Rights Reserved.</span>
-            <span>
-              SHADES is accredited by Community Health Accreditation Partner for
-              meeting the industry’s highest nationally recognized standards of
-              care.
-            </span>
-          </div>
+          ></Image> */}
+          {/* <div className="text-xs flex flex-col "> */}
+            <span>© 2024 SHADES. All Rights Reserved.</span>
+
+          {/* </div> */}
         </div>
       </div>
     </div>
