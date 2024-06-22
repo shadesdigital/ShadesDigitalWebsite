@@ -5,19 +5,19 @@ import TextCard, { TextCardProps } from "@/app/UI components/TextCard";
 export default function AboutUs() {
   const textCardCarousal = [
     {
-      logo: "/assets/commitment to excellence.svg",
-      title: "Commitment to excellence",
-      data: "A first step to continous improvement and the driving force behind top-rated organizations",
+      icon: "handshake-o",
+      title: "Customer Empathy",
+      data: "At Shades Digital, we prioritize understanding our customers' unique challenges and aspirations to ensure our solutions align perfectly with their needs.",
     },
     {
-      logo: "/assets/personalised approach.svg",
-      title: "Personalized Approach",
-      data: "Knowledge is closely related to the person who developed or holds it and is shared through face-to-face contact.",
+      icon: "personalised-approach",
+      title: "AGILE DELIVERY",
+      data: "We embrace agile delivery to ensure our projects are flexible, responsive, and consistently meet our clients' evolving needs.",
     },
     {
-      logo: "/assets/empower businesses.svg",
-      title: "Empower Businesses",
-      data: "Sharing information, rewards, and power with employees, focusing on employee experience makes all the difference",
+      icon: "empower-businesses",
+      title: "IDEAL WORKPLACE",
+      data: "We foster an ideal workplace culture centered on innovation, collaboration, and continuous learning, empowering our team to excel in delivering exceptional solutions to our clients.",
     },
   ];
 
@@ -43,18 +43,18 @@ export default function AboutUs() {
             innovation to drive success for our clients.
             <br />
             <br />
-            At Shades Digital, we specialize in providing cutting-edge IT
-            solutions that are tailored to meet the unique needs of each
-            partner. Our comprehensive range of services includes software
-            development, cloud computing, cybersecurity, data analytics, and IT
-            consulting. By leveraging the latest technologies and industry best
-            practices, we ensure that our clients stay ahead in a rapidly
-            evolving digital world. Our mission is simple yet profound: to
-            empower businesses by connecting passion with technology. We believe
-            that the key to our success lies in the success of our partners.
-            This belief drives us to deliver exceptional service and support,
-            fostering a collaborative environment where innovation and
-            creativity can thrive.
+            At Shades Digital, we specialize in delivering state-of-the-art IT
+            solutions tailored to the unique needs of each partner. Our
+            comprehensive services encompass product development, website
+            development, UI/UX consultations, SEO, automation, and IT
+            consulting. By harnessing the latest technologies and adhering to
+            industry best practices, we ensure our clients stay ahead in the
+            fast-paced digital landscape. Our mission is simple yet profound: to
+            empower businesses by uniting passion with technology. We believe
+            our success is intrinsically linked to the success of our partners.
+            This conviction drives us to provide exceptional service and
+            support, fostering a collaborative environment where innovation and
+            creativity can flourish.
           </div>
         </div>
         <div
@@ -72,15 +72,14 @@ export default function AboutUs() {
           </div>
 
           <div className="why-us-data w-3/6 mx-auto text-sm mb-5">
-            We embrace technology to help our partners pursue their passions and
-            achieve success in their endeavors. We believe that our success is
-            determined by the success of our partners.
+            We help our partners connect their passion with technology and
+            innovation, believing that our success is defined by their success.
           </div>
           <div className="static-carousal grid grid-cols-3 gap-10">
             {textCardCarousal?.map((card: TextCardProps, index: number) => (
               <TextCard
                 key={index}
-                logo={card?.logo}
+                icon={card?.icon}
                 title={card?.title}
                 data={card?.data}
                 isAboutUs={true}

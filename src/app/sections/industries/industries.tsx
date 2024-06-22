@@ -4,24 +4,24 @@ import React from "react";
 export default function Industries() {
   const IndustriesData = [
     {
-      logo: "/assets/healthcare.svg",
+      icon: "aid-kit",
       title: "Healthcare",
-      data: "knowledge is closely related to the person who developed or holds it and is shared through face-to-face contact",
+      data: "Harnessing technology to develop groundbreaking healthcare solutions.",
     },
     {
-      logo: "/assets/ecommerce_horse.svg",
+      icon: "cart",
       title: "E commerce",
-      data: "knowledge is closely related to the person who developed or holds it and is shared through face-to-face contact",
+      data: "Pushing the boundaries of e-commerce with cutting-edge technologies.",
     },
     {
-      logo: "/assets/ecommerce_head.svg",
-      title: "E commerce",
-      data: "knowledge is closely related to the person who developed or holds it and is shared through face-to-face contact",
+      icon: "location-marina",
+      title: "Marine",
+      data: "Advancing marine technology through innovative solutions.",
     },
     {
-      logo: "/assets/cross.svg",
-      title: "E commerce",
-      data: "knowledge is closely related to the person who developed or holds it and is shared through face-to-face contact",
+      icon: "cogs",
+      title: "Logistics",
+      data: "Driving logistics forward with advanced solutions and technologies.",
     },
   ];
 
@@ -48,7 +48,7 @@ export default function Industries() {
           {IndustriesData?.map((card: TextCardProps, index: number) => (
             <TextCard
               key={index}
-              logo={card?.logo}
+              icon={card?.icon}
               title={card?.title}
               data={card?.data}
               isAboutUs={false}
