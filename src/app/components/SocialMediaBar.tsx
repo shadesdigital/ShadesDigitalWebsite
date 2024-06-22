@@ -12,7 +12,7 @@ const SocialMediaIcon = (props: SocialMediaIconProps) => {
 
   return (
     <Link
-      className="w-8 h-8 mx-2 hover:scale-105 opacity-80 hover:opacity-100"
+      className="w-8 h-8 mx-2 hover:scale-105 opacity-70 hover:opacity-100"
       href={`//` + url}
       passHref
       target="_blank"
