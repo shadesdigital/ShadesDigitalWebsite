@@ -12,9 +12,8 @@ export default function Home() {
       
       <Herobanner/>
       <AboutUs/>
-      <Insights/>
-      <Industries/>
       <OurServices/>
+      <Industries/>
       <Footer/>
     </main>
   );
