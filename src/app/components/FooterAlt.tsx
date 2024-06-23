@@ -3,25 +3,25 @@ import React from "react";
 import Image from "next/image";
 
 import logo from "../../../public/assets/logo.png";
-import SocialMediaIcon from "./SocialMediaBar";
 import Icon from "./Icon";
+import { Dock, DockIcon } from "./magicui/dock";
 
 export default function FooterAlt() {
   const socialMediaHandles = [
     {
-      socialMedia: "facebook2",
+      icon: "facebook2",
       url: "www.facebook.com",
     },
     {
-      socialMedia: "instagram",
+      icon: "instagram",
       url: "www.instagram.com",
     },
     {
-      socialMedia: "linkedin",
+      icon: "linkedin",
       url: "www.linkedin.com",
     },
     {
-      SocialMedia: "youtube",
+      icon: "youtube",
       url: "www.youtube.com",
     },
   ];
@@ -41,19 +41,26 @@ export default function FooterAlt() {
             <h2 className="text-5xl font-medium  mb-8 mx-5 opacity-70">
               SHADES.digital
             </h2>
-            <div className="address w-4/6 px-5 mb-8 opacity-90">
+            <div className="address w-4/6 px-5 opacity-90">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem,
               voluptatibus ea sit dolor illo corporis dolore blanditiis dolorem
               corrupti, maxime facere.
             </div>
-            <div className="social-media-icons w-3/6  flex flex-row mx-4 gap-1 mb-5 ">
-              {socialMediaHandles?.map((item: any, index: number) => (
-                <SocialMediaIcon
-                  key={index}
-                  socialMedia={item?.socialMedia}
-                  url={item?.url}
-                />
-              ))}
+            <div className="social-media-icons w-3/6  flex flex-row gap-1 mb-5 ">
+              {
+                <Dock className="mx-5">
+                  {socialMediaHandles?.map((item: any, index: number) => (
+                    <DockIcon>
+                      <Icon
+                        key={index}
+                        size={"100%"}
+                        icon={item?.icon}
+                        url={item?.url}
+                      />
+                    </DockIcon>
+                  ))}
+                </Dock>
+              }
             </div>
           </div>
         </div>

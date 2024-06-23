@@ -1,6 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import TextCard, { TextCardProps } from "@/app/UI components/TextCard";
+import WavyText from "@/app/components/magicui/wavy-text";
+import WordFadeIn from "@/app/components/magicui/word-fade-in";
+import GradualSpacing from "@/app/components/magicui/gradual-spacing";
+import Particles from "@/app/components/magicui/particles";
+import BlurIn from "@/app/components/magicui/blur-in";
+import TypingAnimation from "@/app/components/magicui/typing-animation";
 
 export default function AboutUs() {
   const textCardCarousal = [
@@ -24,36 +30,43 @@ export default function AboutUs() {
   return (
     <div className="w-full h-max  bg-banner-bg bg-center">
       <div className="h-fit pb-8 bg-gradient-to-b from-background-900 via-background-700 to-background-600 flex flex-col items-center text-white">
-        <div className="top-section w-9/12  flex flex-row gap-5 p-3 mb-3">
-          <div className="who-are-we-label w-3/5 h-full p-5 py-7 pr-20 border-8 text-6xl">
-            <b>
-              WHO
-              <br />
-              ARE
-              <br />
-              WE ?
-            </b>
+        <div className=" w-9/12  flex flex-row gap-5 p-3 mb-3">
+          <div className=" w-3/5 h-full p-5 pr-20 border-8 ">
+            {
+              <WordFadeIn
+                words={"WHO \nARE \nWE ?"}
+                className="text-left text-6xl text-white"
+              />
+            }
           </div>
-          <div className="who-are-we-data py-4 text-sm">
-            Founded by a team of young passionate entrepreneurs, Shades Digital
+
+          {
+            <div className="py-4 text-sm">
+              <BlurIn
+                word={`Founded by a team of young passionate entrepreneurs, Shades Digital
             is dedicated to transforming the IT services landscape. Our journey
             began with a shared vision : to harness the power of technology and
-            innovation to drive success for our clients.
-            <br />
-            <br />
-            At Shades Digital, we specialize in delivering state-of-the-art IT
-            solutions tailored to the unique needs of each partner. Our
-            comprehensive services encompass product development, website
-            development, UI/UX consultations, SEO, automation, and IT
-            consulting. By harnessing the latest technologies and adhering to
-            industry best practices, we ensure our clients stay ahead in the
-            fast-paced digital landscape. Our mission is simple yet profound: to
-            empower businesses by uniting passion with technology. We believe
-            our success is intrinsically linked to the success of our partners.
-            This conviction drives us to provide exceptional service and
-            support, fostering a collaborative environment where innovation and
-            creativity can flourish.
-          </div>
+            innovation to drive success for our clients. `}
+                className="text-base"
+              />
+              <br />
+              <BlurIn
+                word={`At Shades Digital,
+            we specialize in delivering state-of-the-art IT solutions tailored
+            to the unique needs of each partner. Our comprehensive services
+            encompass product development, website development, UI/UX
+            consultations, SEO, automation, and IT consulting. By harnessing the
+            latest technologies and adhering to industry best practices, we
+            ensure our clients stay ahead in the fast-paced digital landscape.
+            Our mission is simple yet profound: to empower businesses by uniting
+            passion with technology. We believe our success is intrinsically
+            linked to the success of our partners. This conviction drives us to
+            provide exceptional service and support, fostering a collaborative
+            environment where innovation and creativity can flourish.`}
+                className="text-base"
+              />
+            </div>
+          }
         </div>
         <div
           style={{
@@ -62,26 +75,40 @@ export default function AboutUs() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="lower-section w-10/12 h-3/5  px-20 text-center bg-blue-500"
+          className="lower-section w-10/12 h-3/5  px-20 text-center"
         >
           <div className="flex w-fit h-fit mx-auto mb-5 -mt-5">
             <Image src={"/assets/plus.svg"} alt="plus" height={80} width={40} />
-            <h2 className="text-5xl">WHY US ?</h2>
+            {
+              <GradualSpacing
+                text={"WHY US ?"}
+                className="text-5xl tracking-tighter font-medium"
+              />
+            }
           </div>
 
           <div className="why-us-data w-3/6 mx-auto text-sm mb-5">
-            We help our partners connect their passion with technology and
-            innovation, believing that our success is defined by their success.
+            {
+              <TypingAnimation
+                text={
+                  "We help our partners connect their passion with technology and innovation, believing that our success is defined by their success."
+                }
+                duration={45}
+                className="text-sm font-light"
+              />
+            }
           </div>
           <div className="static-carousal grid grid-cols-3 gap-10">
             {textCardCarousal?.map((card: TextCardProps, index: number) => (
-              <TextCard
-                key={index}
-                icon={card?.icon}
-                title={card?.title}
-                data={card?.data}
-                isAboutUs={true}
-              />
+              <div>
+                <TextCard
+                  key={index}
+                  icon={card?.icon}
+                  title={card?.title}
+                  data={card?.data}
+                  isAboutUs={true}
+                />
+              </div>
             ))}
           </div>
         </div>
