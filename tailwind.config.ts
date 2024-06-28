@@ -1,4 +1,4 @@
-import {nextui} from '@nextui-org/theme';
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -6,7 +6,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/components/[object Object].js"
+    "./node_modules/@nextui-org/theme/dist/components/[object Object].js",
   ],
   theme: {
     extend: {
@@ -18,28 +18,28 @@ const config: Config = {
       colors: {
         primary: "#243c5a",
         background: {
-          100: "#cfffe",//todo
-          200: "#a5f3fc",//todo
-          300: "#67e8f9",//todo
+          100: "#cfffe", //todo
+          200: "#a5f3fc", //todo
+          300: "#67e8f9", //todo
           400: "#030c0f",
           500: "#010202",
           600: "#0b1720",
           700: "#163448",
           800: "#0A151D",
-          900:"#060d13"
+          900: "#060d13",
         },
         secondary: "#243c5a",
         "prime-black": "#00000",
       },
       scale: {
-        '175': '1.75',
-        '199': '1.99',
-        
+        "175": "1.75",
+        "199": "1.99",
       },
       animation: {
         marquee: "marquee var(--duration) linear infinite",
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+        fade: "fadeOut 2s ease-in-out",
       },
       keyframes: {
         marquee: {
@@ -65,6 +65,10 @@ const config: Config = {
           to: {
             "background-position": "0% 0%",
           },
+        },
+        fadeOut: {
+          from: { opacity: "0" },
+          to: { opacity: "100" },
         },
       },
     },

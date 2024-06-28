@@ -7,14 +7,15 @@ export interface TextCardProps {
   title: string | null;
   data: string | null;
   isAboutUs?: boolean | null;
+  className?: string | null;
 }
 
 export default function TextCard(props: TextCardProps) {
-  const { icon, title, data, isAboutUs } = props;
+  const { icon, title, data, isAboutUs, className = "" } = props;
 
   return (
     <div
-      className={`w-fit mx-auto my-3  ${
+      className={`w-fit mx-auto my-3 ${className}  ${
         isAboutUs
           ? "text-center hover:scale-105 "
           : "border-4 text-left pb-5 hover:-translate-y-2 "

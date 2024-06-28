@@ -88,15 +88,8 @@ export default function AboutUs() {
           </div>
 
           <div className="why-us-data w-3/6 mx-auto text-sm mb-5">
-            {
-              <TypingAnimation
-                text={
-                  "We help our partners connect their passion with technology and innovation, believing that our success is defined by their success."
-                }
-                duration={45}
-                className="text-sm font-light"
-              />
-            }
+            We help our partners connect their passion with technology and
+            innovation, believing that our success is defined by their success.
           </div>
           <div className="static-carousal grid grid-cols-3 gap-10">
             {textCardCarousal?.map((card: TextCardProps, index: number) => (
@@ -107,6 +100,7 @@ export default function AboutUs() {
                   title={card?.title}
                   data={card?.data}
                   isAboutUs={true}
+                  className={"animate-fade"}
                 />
               </div>
             ))}
