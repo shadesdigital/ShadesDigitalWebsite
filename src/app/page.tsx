@@ -14,7 +14,7 @@ export default function Home() {
       <Herobanner/>
       <AboutUs/>
       <OurServices/>
-      <Industries/>
+      {/* <Industries/> */}
       <IndustriesCopy/>
       <Footer/>
     </main>
