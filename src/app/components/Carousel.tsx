@@ -8,7 +8,12 @@ import { AnimatedButton } from "./magicui/animated-button";
 import ServicesMarque from "./ServicesMarque";
 import Image from "next/image";
 import { BorderBeam } from "./magicui/border-beam";
-import {useSpring,animated} from 'react-spring'
+import {
+  CrossCircledIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+} from "@radix-ui/react-icons";
+import Particles from "./magicui/particles";
 
 interface Services {
   label: string;
@@ -19,16 +24,10 @@ interface Services {
 }
 
 export default function Carousel() {
-  const [selected, setSelected] = useState<Services>();
+  const [selected, setSelected] = useState<any>();
 
   const [filteredData, setFilteredData] = useState<any[]>(services);
 
-
-  const animationProps = useSpring({
-    to:{opacity:1},
-    from:{opacity:0},
-    delay:200
-  })
   const onClick = (data: Services) => {
     setSelected(data);
     filterData(data?.index);
@@ -45,30 +44,19 @@ export default function Carousel() {
 
   const Buttons = () => {
     return (
-      <div className=" flex justify-center items-end">
-        <button
-          style={{
-            width: "40px",
-            height: " 40px",
-            borderRadius: "50%",
-            backgroundColor: "#eee4",
-            border: "none",
-            color: "#fff",
-            // font-family: monospace,
-            // font-weight: bold,
-            transition: ".5s",
-            margin: "20px",
+      <div className="flex justify-center content-stretch">
+        <ArrowLeftIcon
+          className="h-8 w-8 opacity-70 cursor-pointer"
+          onClick={() => {
+            onClickPrev();
           }}
-          id="prev"
-        >
-          &lt;
-        </button>
-        <button
-          className="rounded-full my-5 bg-white h-10 w-10 opacity-50 text-white"
-          id="next"
-        >
-          &gt;
-        </button>
+        />
+        <ArrowRightIcon
+          className="h-8 w-8 opacity-70 cursor-pointer "
+          onClick={() => {
+            onClickNext();
+          }}
+        />
       </div>
     );
   };
@@ -83,29 +71,51 @@ export default function Carousel() {
     );
   };
 
+  const onClickNext = () => {
+    if (selected?.index == services?.length - 1) {
+      setSelected(services[0]);
+    } else {
+      setSelected(services[selected?.index + 1]);
+    }
+  };
+
+  const onClickPrev = () => {
+    if (selected?.index == 0) {
+      setSelected(services[services.length - 1]);
+    } else {
+      setSelected(services[selected?.index - 1]);
+    }
+  };
+
   return selected ? (
     <div
-    style={{
-      color: "white",
-      margin: 0,
-      padding: 10,
-      display: "flex",
-      flexDirection: "column",
-      width: "90%",
-      animation: 'ease-in',
-      // animationFillMode:"backwards",
-      animationDelay:'3'
-    }}
+      style={{
+        color: "white",
+        margin: 0,
+        padding: 10,
+        display: "flex",
+        flexDirection: "column",
+        width: "90%",
+        animation: "ease-in",
+        // animationFillMode:"backwards",
+        animationDelay: "3",
+      }}
       className="overflow-hidden relative"
     >
-       <Image
-      src={selected?.image}
-      width={500}
-      height={500}
-      alt="background"
-      className="absolute z-0 w-full brightness-50 blur-sm"
-    />
+      <Image
+        src={selected?.image}
+        width={500}
+        height={500}
+        alt="background"
+        className="absolute z-0 w-full brightness-50 blur-sm"
+      />
       <div className="w-2/3 flex-col self-start justify-start items-start pt-10  z-50">
+        <CrossCircledIcon
+          className="h-8 w-8 opacity-70 cursor-pointer absolute top-10 right-10"
+          onClick={() => {
+            setSelected("");
+          }}
+        />
         <Description />
         <div className=" z-50 absolute top-1/2 left-1/2">
           <MagicContainer
@@ -113,7 +123,7 @@ export default function Carousel() {
               "flex h-[500px] w-[80px] flex-col gap-4 lg:h-[250px] lg:flex-row "
             }
           >
-            {filteredData?.slice(0, 5).map((item, index) => {
+            {filteredData?.slice(0, 5).map((item) => {
               return (
                 <MagicCard
                   className="hover:scale-110 flex w-full cursor-pointer flex-col items-center justify-center overflow-hidden bg-[radial-gradient(var(--mask-size)_circle_at_var(--mouse-x)_var(--mouse-y),#ffaa40_0,#9c40ff_50%,transparent_100%)] p-20 shadow-2xl"
@@ -131,7 +141,7 @@ export default function Carousel() {
           </MagicContainer>
         </div>
       </div>
-      <div className="absolute top-20 left-3/4">
+      <div className="absolute top-1/3 right-20">
         <Buttons />
       </div>
     </div>
@@ -150,9 +160,14 @@ export default function Carousel() {
       }}
       className="overflow-hidden relative"
     >
-       <BorderBeam />
+      <BorderBeam />
+      <Particles className="absolute inset-0"
+        quantity={100}
+        ease={80}
+        // color={color}
+        refresh/>
       <div className="w-2/3  self-start justify-start items-start py-5  z-50">
-        <h1 className=" px-10 text-4xl md:text-5xl font-bold">What we do </h1>
+        <h1 className=" px-10 text-4xl md:text-5xl font-bold">Take a look at what we do </h1>
         <p className="text-base text-sm mt-2 px-10">
           In publishing and graphic design, Lorem ipsum is a placeholder text
           commonly used to demonstrate the visual form of a document or a
@@ -161,8 +176,8 @@ export default function Carousel() {
         </p>
         <div className="absolute top-8 right-10 hover:opacity-70">
           <AnimatedButton
-            buttonTextColor="#0A151D"
-            buttonColor="#ffffff"
+            buttonTextColor="white"
+            buttonColor="transparent"
             initialText={
               <span className="group inline-flex items-center">
                 Know more

@@ -2,6 +2,7 @@ import Footer from "./components/Footer";
 import AboutUs from "./sections/about-us/aboutUs";
 import Herobanner from "./sections/hero-banner/heroBanner";
 import Industries from "./sections/industries/industries";
+import IndustriesCopy from "./sections/industries/industriesCopy";
 import Insights from "./sections/insights/insights";
 import OurServices from "./sections/our-services/ourServices";
 
@@ -13,7 +14,8 @@ export default function Home() {
       <Herobanner/>
       <AboutUs/>
       <OurServices/>
-      <Industries/>
+      {/* <Industries/> */}
+      <IndustriesCopy/>
       <Footer/>
     </main>
   );
