@@ -1,6 +1,7 @@
 import { cn } from "../../../lib/utils";
 import Marquee from "./magicui/marquee";
 import {services} from './data'
+import Image from "next/image";
 
 
 
@@ -28,7 +29,7 @@ const ServiceCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={image} />
+        <Image className="" width="100" height="100" alt="" src={image} />
         <div className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {label}
@@ -36,7 +37,7 @@ const ServiceCard = ({
           <p className="text-xs font-medium dark:text-white/40">{}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{tag}</blockquote>
+      {/* <blockquote className="mt-2 text-sm">{tag}</blockquote> */}
     </figure>
   );
 };

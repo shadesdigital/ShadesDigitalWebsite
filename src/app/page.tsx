@@ -3,18 +3,20 @@ import FooterAlt from "./components/FooterAlt";
 import AboutUs from "./sections/about-us/aboutUs";
 import Herobanner from "./sections/hero-banner/heroBanner";
 import Industries from "./sections/industries/industries";
+import IndustriesCopy from "./sections/industries/industriesCopy";
 import Insights from "./sections/insights/insights";
 import OurServices from "./sections/our-services/ourServices";
 
 export default function Home() {
   return (
     <main>
-      <Herobanner />
-      <AboutUs />
-      <OurServices />
-      <Industries />
-      {/* <Footer /> */}
-      <FooterAlt />
+      
+      <Herobanner/>
+      <AboutUs/>
+      <OurServices/>
+      {/* <Industries/> */}
+      <IndustriesCopy/>
+      <Footer/>
     </main>
   );
 }

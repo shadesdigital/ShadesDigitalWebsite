@@ -91,7 +91,7 @@ export default function AboutUs() {
             We help our partners connect their passion with technology and
             innovation, believing that our success is defined by their success.
           </div>
-          <div className="static-carousal grid grid-cols-3 gap-10">
+          <div className="static-carousal grid grid-cols-3 gap-10 animate-fade">
             {textCardCarousal?.map((card: TextCardProps, index: number) => (
               <div>
                 <TextCard
@@ -100,7 +100,7 @@ export default function AboutUs() {
                   title={card?.title}
                   data={card?.data}
                   isAboutUs={true}
-                  className={"animate-fade"}
+                  className={""}
                 />
               </div>
             ))}

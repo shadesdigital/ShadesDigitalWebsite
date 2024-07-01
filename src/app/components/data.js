@@ -251,3 +251,51 @@ export const services = [
     ],
   },
 ];
+
+import { CalendarIcon, FileTextIcon, InputIcon, ArchiveIcon } from "@radix-ui/react-icons";
+export const industries = [
+  {
+    Icon: FileTextIcon,
+    name: "E commerce",
+    description: "Pushing the boundaries of e-commerce with cutting-edge technologies.",
+    className: "col-span-4",
+    href: "/",
+    cta: "Learn more",
+    background: (
+        <div></div>
+       ), 
+  },
+  
+  
+  {
+    Icon: InputIcon,
+    name: "Logistics",
+    description: "Driving logistics forward with advanced solutions.",
+    className: "col-span-3",
+    href: "/",
+    cta: "Learn more",
+    background: (
+        <div></div>
+       ), 
+    },
+  {
+    Icon: CalendarIcon,
+    name: "Marine",
+    description: "Advancing marine technology through innovative solutions.",
+    className: "col-span-3",
+    href: "/",
+    cta: "Learn more",
+    background: (
+        <div></div>
+       ), 
+  },
+  {
+    Icon: ArchiveIcon,
+    name: "Healthcare",
+    description: "Harnessing technology to develop groundbreaking healthcare solutions.",
+    className: "col-span-4",
+    href: "/",
+    cta: "Learn more",
+  
+    },
+];
