@@ -382,6 +382,29 @@
       "setIdx": 3,
       "setId": 1,
       "iconIdx": 315
+    },
+    {
+      "icon": {
+        "paths": [
+          "M784 256v416c0 8.837-7.163 16-16 16s-16-7.163-16-16v0-377.375l-484.688 484.687c-2.895 2.895-6.895 4.686-11.312 4.686-8.836 0-15.998-7.163-15.998-15.998 0-4.418 1.791-8.417 4.686-11.313l484.688-484.687h-377.375c-8.837 0-16-7.163-16-16s7.163-16 16-16v0h416c8.836 0 16 7.164 16 16l0 0z"
+        ],
+        "attrs": [{}],
+        "isMulticolor": false,
+        "isMulticolor2": false,
+        "grid": 0,
+        "tags": ["arrow-up-right-thin-svgrepo-com"]
+      },
+      "attrs": [{}],
+      "properties": {
+        "order": 2,
+        "id": 0,
+        "name": "arrow-up-right",
+        "prevSize": 32,
+        "code": 59648
+      },
+      "setIdx": 0,
+      "setId": 5,
+      "iconIdx": 0
     }
   ],
   "height": 1024,

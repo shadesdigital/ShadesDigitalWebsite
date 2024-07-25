@@ -1,12 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import TextCard, { TextCardProps } from "@/app/UI components/TextCard";
-import WavyText from "@/app/components/magicui/wavy-text";
 import WordFadeIn from "@/app/components/magicui/word-fade-in";
 import GradualSpacing from "@/app/components/magicui/gradual-spacing";
-import Particles from "@/app/components/magicui/particles";
 import BlurIn from "@/app/components/magicui/blur-in";
-import TypingAnimation from "@/app/components/magicui/typing-animation";
 
 export default function AboutUs() {
   const textCardCarousal = [
